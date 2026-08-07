@@ -1,0 +1,16 @@
+[package]
+name = "liska-install-scripts"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+colored = "3.1.1"
+libc = "0.2.187"
+
+[[bin]]
+name = "lkstrap"
+path = "src/lkstrap.rs"
+
+[[bin]]
+name = "lkfstab"
+path = "src/lkfstab.rs"
