@@ -4,9 +4,9 @@ use std::path::{Path, PathBuf};
 use std::process::{Command, exit};
 use colored::Colorize;
 
-pub fn info(msg: &str) { println!("{} {}", "[i]".bright_cyan(), msg); }
-pub fn success(msg: &str) { println!("{} {}", "[✓]".bright_green(), msg.bright_green()); }
-pub fn error(msg: &str) { eprintln!("{} {}", "[✗]".bright_red(), msg.bright_red()); }
+fn info(msg: &str) { println!("{} {}", "[i]".bright_cyan(), msg); }
+fn success(msg: &str) { println!("{} {}", "[✓]".bright_green(), msg.bright_green()); }
+fn error(msg: &str) { eprintln!("{} {}", "[✗]".bright_red(), msg.bright_red()); }
 
 fn require_root() {
     if unsafe { libc::geteuid() } != 0 {
